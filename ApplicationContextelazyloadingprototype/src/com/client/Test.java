@@ -19,7 +19,9 @@ public class Test {
 
 		
 		Student s=(Student) ac.getBean("s");
-		//System.out.println(s);
+		System.out.println(s);
+		Student s1=(Student) ac.getBean("s");
+		System.out.println(s1);
 		
 	}
 
