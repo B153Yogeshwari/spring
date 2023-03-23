@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+       <bean id="ad1" class="com.model.Address">
+       <property name="pincode" value="431153"></property>
+       <property name="cityName" value="kannad"></property>
+       </bean> 
+       <bean id="ad2" class="com.model.Address">
+       <property name="pincode" value="343223"></property>
+       <property name="cityName" value="Jalna"></property>
+       </bean>
+       <bean id="ad3" class="com.model.Address">
+       <property name="pincode" value="56342"></property>
+       <property name="cityName" value="Chikhali"></property>
+       </bean>
+        <bean id="s" class="com.model.Student">
+        <property name="list">
+        <list>
+        <ref bean="ad1"></ref>
+        <ref bean="ad2"/>
+        </list>
+        </property>
+        <property name="set">
+        <set>
+        <ref bean="ad3"/>
+        <ref bean="ad2"/>
+        </set>
+        </property>
+   <property name="map">
+   <map>
+   <entry key="101" value-ref="ad1"></entry>
+   <entry key="102" value-ref="ad2"></entry>
+   </map>
+   </property>
+        </bean>
+        
+        </beans>
+        
+        
