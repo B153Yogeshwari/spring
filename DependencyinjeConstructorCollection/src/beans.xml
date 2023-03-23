@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        
+        
+ <bean id="s" class="com.model.Student">
+ <constructor-arg name="cities">
+ <list>
+ <value>pune</value>
+ <value>Mumbai</value>
+ <value>Aurangabad</value>
+ </list>
+ </constructor-arg>
+ 
+ <constructor-arg name="mobileNo">
+ <set>
+ <value>9123434556</value>
+ <value>7867564534</value>
+ </set>
+ </constructor-arg>
+ <constructor-arg name="contrycode">
+ <map>
+ <entry key="India" value="91"></entry>
+ <entry key="US" value="010"></entry></map>
+ </constructor-arg>
+ 
+ 
+ </bean>
+        </beans>
+        
+        
