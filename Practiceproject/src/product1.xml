@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="d1" class="com.model.Dealer1">
+        <constructor-arg name="dealerId" value="101"></constructor-arg>
+        <constructor-arg name="dealerName" value="Pqr"></constructor-arg>
+        <constructor-arg name="mobileNo" value="9987876545"></constructor-arg>
+        </bean>
+        <bean id="d2" class="com.model.Dealer1">
+        <constructor-arg name="dealerId" value="102"></constructor-arg>
+        <constructor-arg name="dealerName" value="pranav"></constructor-arg>
+        <constructor-arg name="mobileNo" value="7654876545"></constructor-arg>
+        </bean>
+        <bean id="s1" class="com.model.Supplier1">
+        <constructor-arg name="supId" value="201"></constructor-arg>
+        <constructor-arg name="supName" value="Rohan"></constructor-arg>
+        <constructor-arg name="supMobileNo" value="9987675645"></constructor-arg>
+        <constructor-arg name="cities"><list>
+        <value>Nagpur</value>
+        <value>Aurangabad</value>
+        </list>
+        </constructor-arg>
+        </bean>
+        <bean id="pr" class="com.model.Product1">
+        <constructor-arg name="productId" value="301"></constructor-arg>
+        <constructor-arg name="productName" value="Freeze"></constructor-arg>
+        <constructor-arg name="productPrice" value="32000"></constructor-arg>
+        <constructor-arg name="list">
+        <list><ref bean="d1"/>
+        <ref bean="d2"/></list>   </constructor-arg>
+        <constructor-arg name="map">
+        <map><entry key="1" value-ref="s1"></entry>
+        </map>
+        </constructor-arg>
+        
+        
+        
+        
+        </bean>
+        
+        </beans>

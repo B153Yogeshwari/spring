@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        
+        <bean id="s1" class="com.model.Supplier2">
+        <property name="supId" value="201"></property>
+        <property name="supName" value="Adharsh"></property>
+        <property name="supMobileNo" value="9987122323"></property>
+        <property name="cities">
+        <list><value>Pune</value>
+        <value>Mumbai</value>
+        </list>
+        </property>
+        </bean>
+         <bean id="pr" class="com.model.Product2" parent="s1">
+        <property name="productId" value="301"></property>
+        <property name="productName" value="Television"></property>
+        <property name="productPrice" value="20000"></property>
+        </bean>
+        </beans>
+        
+        
+        
